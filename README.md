@@ -46,3 +46,7 @@ Then paste the MaxPreps box score URL and generate the summary.
 
 - This is a basic MVP. It extracts top performers from Passing, Rushing, Receiving, and Tackles tables when available.
 - If MaxPreps has not entered stats yet for a team, the summary will omit those players.
+
+- Next steps: need to fix so we can use with just the link. then test with more of the other games on the maxpreps website (right now i just used https://www.maxpreps.com/games/8-23-2025/football-25/chaminade-madonna-vs-st-frances-academy.htm?c=1bE-DCyTtkGt91XdGYhm3w#tab=box-score&schoolid=) 
+
+then try to see if you can demo this to someone at school to see if they are excited by it!! 
