@@ -1,0 +1,146 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --accent: #f97316;
+  --muted: #9ca3af;
+  --text: #f8fafc;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #0f172a 60%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.page {
+  display: grid;
+  place-items: center;
+  padding: 48px 16px;
+}
+
+.card {
+  background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 32px;
+  width: min(760px, 100%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+label.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+label.toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+textarea {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  color: var(--text);
+  font-family: "Source Code Pro", "Courier New", monospace;
+  resize: vertical;
+  min-height: 180px;
+}
+
+.hidden {
+  display: none;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  color: var(--text);
+}
+
+button {
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: #0b1220;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+.status {
+  min-height: 24px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.status.success {
+  color: #22c55e;
+}
+
+.status.error {
+  color: #f87171;
+}
+
+.output {
+  display: grid;
+  gap: 12px;
+}
+
+.output-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+@media (max-width: 640px) {
+  .card {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}

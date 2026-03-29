@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sports Poster</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <h1>Sports Poster</h1>
+        <p class="subtitle">
+          Paste a MaxPreps box score link to generate a ready-to-post Facebook recap.
+        </p>
+
+        <form id="summary-form" class="form">
+          <label class="toggle">
+            <input type="checkbox" id="useHtml" />
+            Paste HTML instead of URL
+          </label>
+
+          <div id="urlFields">
+            <label for="boxUrl">Box score URL</label>
+            <input
+              id="boxUrl"
+              name="boxUrl"
+              type="url"
+              placeholder="https://www.maxpreps.com/games/...#tab=box-score"
+            />
+          </div>
+
+          <div id="htmlFields" class="hidden">
+            <label for="sourceUrl">Source URL (optional)</label>
+            <input
+              id="sourceUrl"
+              name="sourceUrl"
+              type="url"
+              placeholder="https://www.maxpreps.com/games/...#tab=box-score"
+            />
+            <label for="boxHtml">Box score HTML</label>
+            <textarea
+              id="boxHtml"
+              name="boxHtml"
+              rows="8"
+              placeholder="Paste the full HTML from the box score page..."
+            ></textarea>
+          </div>
+
+          <button type="submit">Generate Summary</button>
+        </form>
+
+        <div id="status" class="status" aria-live="polite"></div>
+
+        <div class="output">
+          <div class="output-header">
+            <h2>Generated Post</h2>
+            <button id="copyBtn" type="button">Copy</button>
+          </div>
+          <textarea id="output" rows="12" readonly></textarea>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
